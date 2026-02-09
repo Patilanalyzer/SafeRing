@@ -6,63 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background: #0b1020;
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(180deg,#0a1a2f,#020617);
+      color:#fff;
+      text-align:center;
     }
 
-    header {
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    header{
+      background: linear-gradient(135deg,#00c6ff,#0072ff);
+      padding:60px 20px;
     }
 
-    section {
-      padding: 40px 20px;
+    header h1{
+      margin:0;
+      font-size:38px;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
+    header p{
+      margin-top:10px;
+      font-size:18px;
     }
 
-    .products img {
-      width: 100%;
-      border-radius: 12px;
-      background: #fff;
-      padding: 10px;
+    section{
+      padding:40px 15px;
     }
 
-    video {
-      width: 90%;
-      max-width: 700px;
-      border-radius: 12px;
-      margin-top: 20px;
+    h2{
+      margin-bottom:25px;
+    }
+
+    .products{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      max-width:500px;
+      margin:auto;
+    }
+
+    .products img{
+      width:100%;
+      border-radius:14px;
+      background:#fff;
+      padding:10px;
+    }
+
+    video{
+      width:100%;
+      max-width:500px;
+      border-radius:15px;
+      margin-top:20px;
     }
 
     /* Floating Button */
-    .prebook-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #ff4081;
-      color: #fff;
-      padding: 15px 22px;
-      font-size: 16px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-      z-index: 999;
+    .prebook-btn{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#ff2f7d;
+      color:#fff;
+      padding:14px 22px;
+      border-radius:30px;
+      font-size:18px;
+      font-weight:bold;
+      text-decoration:none;
+      box-shadow:0 8px 25px rgba(255,47,125,.5);
+      z-index:999;
     }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -74,26 +87,27 @@
   <h2>Product Preview</h2>
 
   <div class="products">
-    <img src="images/ring-blue.png" alt="SafeRing Blue">
-    <img src="images/ring-pink.png" alt="SafeRing Pink">
-    <img src="images/ring-silver.png" alt="SafeRing Silver">
-    <img src="images/ring-black-gold.png" alt="SafeRing Premium">
+    <img src="images/ring-blue.png.png" alt="SafeRing Blue – Children">
+    <img src="images/ring-pink.png.png" alt="SafeRing Pink – Women">
+    <img src="images/ring-silver.png.png" alt="SafeRing Silver – Elderly">
+    <img src="images/ring-black-gold.png.png" alt="SafeRing Black Gold – Premium">
   </div>
 </section>
 
 <section>
   <h2>Watch SafeRing in Action</h2>
 
-  <video controls>
-    <source src="videos/safering-demo.mp4" type="video/mp4">
-    Your browser does not support video.
+  <video controls poster="images/ring-blue.png.png">
+    <source src="videos/saferingdemo.mp4.mp4" type="video/mp4">
+    Your browser does not support video playback.
   </video>
 </section>
 
+<!-- Floating Razorpay Button -->
 <a class="prebook-btn"
    href="https://rzp.io/rzp/Cmxk4KZp"
    target="_blank">
-  Pre-Book ₹999
+   Pre-Book ₹999
 </a>
 
 </body>

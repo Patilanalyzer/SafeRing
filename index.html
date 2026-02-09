@@ -1,177 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SafeRing – Smart Personal Safety Ring</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
-    header {
-      background: linear-gradient(135deg, #2563eb, #22c55e);
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 28px;
-      background: #0f172a;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: #22c55e;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-    .card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #60a5fa;
-    }
-    .how-it-works {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
-    .step {
-      background: #020617;
-      padding: 20px;
-      border-radius: 14px;
-    }
-    footer {
-      background: #020617;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #9ca3af;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>SafeRing – Smart Safety Ring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+  text-align:center;
+}
+
+/* HERO */
+.hero{
+  padding:90px 20px;
+}
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+.hero p{
+  font-size:18px;
+  max-width:650px;
+  margin:0 auto 25px;
+  opacity:0.9;
+}
+
+/* MAIN PREBOOK BUTTON */
+.prebook-btn{
+  display:inline-block;
+  padding:16px 38px;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
+  border-radius:45px;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+.prebook-btn:hover{
+  transform:scale(1.07);
+}
+
+/* TRUST TEXT */
+.trust-text{
+  margin-top:14px;
+  font-size:14px;
+  opacity:0.85;
+  line-height:1.6;
+}
+
+/* FLOATING BUTTON */
+.floating-prebook{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  z-index:9999;
+}
+.floating-prebook a{
+  padding:14px 24px;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  border-radius:40px;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <img src="Gemini_Generated_Image_avbka1avbka1avbk (1).png" alt="NextAura Technologies Logo" style="max-width:120px; margin-bottom:20px;" />
+<div class="hero">
   <h1>SafeRing</h1>
-  <p>A smart personal safety ring designed to protect children, women, and elderly parents anytime, anywhere.</p>
-  <a href="#contact" class="btn">Get SafeRing</a>
-</header>
-
-<section>
-  <h2>Product Preview</h2>
-  <div class="features">
-    <div class="card">
-      <img src="be8249b5-6ea3-48e3-9091-b64c422ad1a1.jpg" alt="SafeRing Product" style="width:100%; border-radius:12px;" />
-      <p style="margin-top:10px;">Smart & stylish SafeRing with SOS indicator</p>
-    </div>
-    <div class="card">
-      <img src="ChatGPT Image Jan 26, 2026, 09_54_46 AM.png" alt="SafeRing Use Case" style="width:100%; border-radius:12px;" />
-      <p style="margin-top:10px;">Designed for children & elderly safety</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Watch SafeRing in Action</h2>
-  <div style="max-width:900px; margin:auto;">
-    <video controls style="width:100%; border-radius:16px;">
-      <source src="SafeRing_Explainer_Video_Creation.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</section>
-
-<section>
-  <h2>Why SafeRing?</h2>
-  <div class="features">
-    <div class="card">
-      <h3>Instant SOS</h3>
-      <p>Send emergency alerts to family, friends, and authorities with just one press.</p>
-    </div>
-    <div class="card">
-      <h3>Live Location Tracking</h3>
-      <p>Real-time GPS tracking so your loved ones always know where you are.</p>
-    </div>
-    <div class="card">
-      <h3>Compact & Stylish</h3>
-      <p>Looks like a normal ring, but works like a powerful safety device.</p>
-    </div>
-    <div class="card">
-      <h3>24/7 Protection</h3>
-      <p>Perfect for women, kids, elderly people, night workers, and travelers.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>How It Works</h2>
-  <div class="how-it-works">
-    <div class="step">
-      <h3>1. Wear the Ring</h3>
-      <p>Wear SafeRing comfortably on your finger.</p>
-    </div>
-    <div class="step">
-      <h3>2. Press SOS</h3>
-      <p>Press the hidden button in case of danger.</p>
-    </div>
-    <div class="step">
-      <h3>3. Alert Sent</h3>
-      <p>Emergency message & live location are shared instantly.</p>
-    </div>
-    <div class="step">
-      <h3>4. Get Help</h3>
-      <p>Your trusted contacts and authorities can reach you fast.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p style="text-align:center; max-width:600px; margin:auto;">
-    Want to distribute, invest, or buy SafeRing? Reach out to us today.
+  <p>
+    Smart personal safety ring designed for children, women and elderly parents.
   </p>
-  <p style="text-align:center; margin-top:20px;">
-    📧 Email: <b>info@safering.in</b><br/>
-    📞 Phone: <b>+91-XXXXXXXXXX</b>
-  </p>
-</section>
 
-<footer>
-  © 2026 SafeRing by <b>NextAura Technologies</b>. All rights reserved.
-</footer>
+  <!-- MAIN PRE BOOKING BUTTON -->
+  <a href="https://razorpay.me/@patil151321patil" 
+     target="_blank" 
+     class="prebook-btn">
+     Pre-Booking ₹999
+  </a>
+
+  <div class="trust-text">
+    ✔ Pre-booking amount only<br>
+    ✔ 30–40% discount on final price<br>
+    ✔ 100% refundable anytime
+  </div>
+</div>
+
+<!-- FLOATING BUTTON -->
+<div class="floating-prebook">
+  <a href="https://razorpay.me/@patil151321patil" target="_blank">
+    Pre-Booking ₹999
+  </a>
+</div>
 
 </body>
 </html>

@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SafeRing – Smart Personal Safety Ring</title>
+<title>SafeRing – Smart Safety Ring</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg,#0a1a3c,#0b4ea2);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#0b1d3a,#123d7a);
   color:#fff;
 }
 
@@ -17,10 +17,11 @@ body{
 .hero{
   text-align:center;
   padding:60px 20px;
+  background: linear-gradient(135deg,#00a6ff,#0072ff);
 }
 .hero img{
-  width:120px;
-  animation: pulse 2.5s infinite;
+  width:110px;
+  animation: pulse 2s infinite;
 }
 @keyframes pulse{
   0%{transform:scale(1)}
@@ -28,70 +29,71 @@ body{
   100%{transform:scale(1)}
 }
 .hero h1{
-  font-size:64px;
-  margin:20px 0 10px;
+  font-size:54px;
+  margin:15px 0 10px;
   letter-spacing:2px;
 }
 .hero p{
   font-size:18px;
-  opacity:0.9;
+  opacity:0.95;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-  padding:60px 20px;
-  max-width:1200px;
+  padding:50px 20px;
+  max-width:1100px;
   margin:auto;
 }
 h2{
-  text-align:center;
-  margin-bottom:30px;
+  margin-bottom:20px;
 }
 
 /* PREVIEW */
 .preview{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  display:flex;
   gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 .preview img{
-  width:100%;
-  border-radius:16px;
+  width:220px;
   background:#fff;
   padding:10px;
+  border-radius:16px;
 }
 
 /* INFO IMAGE */
 .info-img{
   display:block;
-  margin:40px auto;
   max-width:900px;
   width:100%;
-  border-radius:20px;
+  margin:40px auto;
+  border-radius:16px;
+  background:#fff;
+  padding:15px;
 }
 
 /* VIDEO */
 video{
   width:100%;
-  max-width:800px;
+  max-width:900px;
   display:block;
-  margin:30px auto;
-  border-radius:16px;
+  margin:auto;
+  border-radius:14px;
 }
 
-/* BUTTON */
-.cta{
-  text-align:center;
-  margin:60px 0;
-}
-.cta a{
-  background:#ff4d88;
+/* FLOATING BUTTON */
+.prebook{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#ff4d7e;
   color:#fff;
-  padding:16px 36px;
-  font-size:20px;
+  padding:14px 22px;
+  border-radius:30px;
   text-decoration:none;
-  border-radius:40px;
   font-weight:bold;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -105,46 +107,49 @@ video{
   <p>Smart Personal Safety Ring for Children, Women & Elderly</p>
 </div>
 
-<!-- WHAT IS -->
+<!-- WHAT IS SAFERING -->
 <section>
-<h2>What is SafeRing?</h2>
-<p>
-SafeRing is a screen-free smart safety ring designed to keep families connected and protected.
-It helps parents track their children safely and allows working adults to monitor the well-being
-of their elderly parents — without screens, games, or distractions.
-<br><br>
-SafeRing works quietly in the background and sends important alerts directly to the caregiver’s mobile.
-</p>
+  <h2>What is SafeRing?</h2>
+  <p>
+    SafeRing is a screen-free smart safety ring designed to keep families connected and protected.
+    It helps parents track their children safely and allows working adults to monitor the well-being
+    of their elderly parents — without screens, games, or distractions.
+  </p>
+  <p>
+    SafeRing works quietly in the background and sends important alerts directly to the caregiver’s mobile.
+  </p>
 </section>
 
 <!-- PRODUCT PREVIEW -->
 <section>
-<h2>Product Preview</h2>
-<div class="preview">
-  <img src="images/ring-blue.png" alt="SafeRing Blue">
-  <img src="images/ring-pink.png" alt="SafeRing Pink">
-  <img src="images/ring-silver.png" alt="SafeRing Silver">
-  <img src="images/ring-black-gold.png" alt="SafeRing Black Gold">
-</div>
+  <h2>Product Preview</h2>
+  <div class="preview">
+    <img src="images/ring-blue.png" alt="Blue Ring">
+    <img src="images/ring-pink.png" alt="Pink Ring">
+    <img src="images/ring-silver.png" alt="Silver Ring">
+    <img src="images/ring-black-gold.png" alt="Black Gold Ring">
+  </div>
+</section>
 
-<img src="images/information.png" class="info-img" alt="SafeRing Information">
+<!-- INFORMATION IMAGE (FIXED) -->
+<section>
+  <h2>Who is SafeRing For?</h2>
+  <img src="images/information.png" class="info-img" alt="SafeRing Information">
 </section>
 
 <!-- VIDEO -->
 <section>
-<h2>Watch SafeRing in Action</h2>
-<video controls>
-  <source src="videos/safering-demo.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+  <h2>Watch SafeRing in Action</h2>
+  <video controls>
+    <source src="videos/safering-demo.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
 </section>
 
-<!-- PREBOOK -->
-<div class="cta">
-  <a href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
-    👉 Pre-Book Now – ₹999
-  </a>
-</div>
+<!-- FLOATING PREBOOK BUTTON -->
+<a class="prebook" href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
+  Pre-Book ₹999
+</a>
 
 </body>
 </html>

@@ -8,99 +8,113 @@
 <style>
 body{
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(135deg,#0d47a1,#1976d2);
+  font-family: Arial, Helvetica, sans-serif;
+  background:linear-gradient(135deg,#0b1d3a,#123d7a);
   color:#fff;
 }
 
-section{
-  padding:50px 20px;
-}
-
+/* HERO */
 .hero{
   text-align:center;
-  padding:80px 20px;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#00a6ff,#0072ff);
 }
-
 .hero img{
-  width:90px;
-  animation:spin 6s linear infinite;
+  width:100px;
+  animation:pulse 2.5s infinite;
 }
-
-@keyframes spin{
-  from{transform:rotate(0deg);}
-  to{transform:rotate(360deg);}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
 }
-
 .hero h1{
-  font-size:48px;
-  margin:20px 0 10px;
+  font-size:54px;
+  margin:15px 0 10px;
+  letter-spacing:2px;
 }
-
 .hero p{
   font-size:18px;
-  opacity:0.9;
+  opacity:0.95;
 }
 
+/* SECTIONS */
+section{
+  padding:55px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 h2{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
+/* PRODUCT PREVIEW */
 .preview{
   display:flex;
   gap:20px;
-  overflow-x:auto;
+  flex-wrap:wrap;
+  justify-content:center;
 }
-
 .preview img{
-  height:260px;
-  border-radius:16px;
+  width:220px;
   background:#fff;
+  padding:10px;
+  border-radius:16px;
 }
 
+/* INFORMATION IMAGE */
+.info-image{
+  display:block;
+  max-width:900px;
+  width:100%;
+  margin:40px auto 30px;
+  border-radius:18px;
+  background:#fff;
+  padding:15px;
+}
+
+/* INFORMATION TEXT BOX */
 .info-box{
   background:#ffffff;
   color:#111;
   border-radius:20px;
   padding:40px;
-  max-width:1000px;
-  margin:0 auto;
 }
-
 .info-grid{
   display:flex;
   flex-wrap:wrap;
   gap:30px;
 }
-
 .info-grid div{
   flex:1;
   min-width:260px;
 }
-
 .info-grid h3{
   margin-bottom:10px;
 }
 
-.video-box video{
+/* VIDEO */
+video{
   width:100%;
   max-width:900px;
-  border-radius:20px;
   display:block;
-  margin:0 auto;
+  margin:auto;
+  border-radius:16px;
 }
 
-.cta{
+/* PREBOOK BUTTON */
+.prebook{
   position:fixed;
   bottom:20px;
   right:20px;
-  background:#ff4081;
+  background:#ff4d7e;
   color:#fff;
-  padding:15px 22px;
+  padding:14px 22px;
   border-radius:30px;
   text-decoration:none;
   font-weight:bold;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -108,11 +122,11 @@ h2{
 <body>
 
 <!-- HERO -->
-<section class="hero">
-  <img src="images/nextaura-logo.png" alt="NextAura">
+<div class="hero">
+  <img src="images/nextaura-logo.png" alt="NextAura Technologies">
   <h1>SafeRing</h1>
   <p>Smart Personal Safety Ring for Children, Women & Elderly</p>
-</section>
+</div>
 
 <!-- WHAT IS SAFERING -->
 <section>
@@ -129,19 +143,22 @@ h2{
 <section>
   <h2>Product Preview</h2>
   <div class="preview">
-    <img src="images/ring-blue.png" alt="">
-    <img src="images/ring-pink.png" alt="">
-    <img src="images/ring-silver.png" alt="">
-    <img src="images/ring-black-gold.png" alt="">
+    <img src="images/ring-blue.png" alt="SafeRing Blue">
+    <img src="images/ring-pink.png" alt="SafeRing Pink">
+    <img src="images/ring-silver.png" alt="SafeRing Silver">
+    <img src="images/ring-black-gold.png" alt="SafeRing Black Gold">
   </div>
 </section>
 
-<!-- INFORMATION (TEXT ONLY – NO IMAGE) -->
+<!-- INFORMATION IMAGE -->
 <section>
-  <div class="info-box">
-    <h2>Who is SafeRing For?</h2>
+  <h2>How SafeRing Helps Your Family</h2>
+  <img src="images/information.png" class="info-image" alt="SafeRing Information">
 
+  <!-- INFORMATION TEXT -->
+  <div class="info-box">
     <div class="info-grid">
+
       <div>
         <h3 style="color:#1976d2;">👶 For Children</h3>
         <ul>
@@ -163,20 +180,22 @@ h2{
           <li>Peace of mind for working families</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- VIDEO -->
-<section class="video-box">
+<section>
   <h2>Watch SafeRing in Action</h2>
   <video controls>
     <source src="videos/saferingdemo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
 </section>
 
-<!-- PAYMENT BUTTON -->
-<a class="cta" href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
+<!-- PREBOOK -->
+<a class="prebook" href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
   Pre-Book ₹999
 </a>
 

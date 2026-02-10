@@ -8,92 +8,99 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#0b1d3a,#123d7a);
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(135deg,#0d47a1,#1976d2);
   color:#fff;
 }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:60px 20px;
-  background: linear-gradient(135deg,#00a6ff,#0072ff);
-}
-.hero img{
-  width:110px;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.08)}
-  100%{transform:scale(1)}
-}
-.hero h1{
-  font-size:54px;
-  margin:15px 0 10px;
-  letter-spacing:2px;
-}
-.hero p{
-  font-size:18px;
-  opacity:0.95;
-}
-
-/* SECTION */
 section{
   padding:50px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-h2{
-  margin-bottom:20px;
 }
 
-/* PREVIEW */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero img{
+  width:90px;
+  animation:spin 6s linear infinite;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+.hero h1{
+  font-size:48px;
+  margin:20px 0 10px;
+}
+
+.hero p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
 .preview{
   display:flex;
   gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
+  overflow-x:auto;
 }
+
 .preview img{
-  width:220px;
-  background:#fff;
-  padding:10px;
-  border-radius:16px;
-}
-
-/* INFO IMAGE */
-.info-img{
-  display:block;
-  max-width:900px;
-  width:100%;
-  margin:40px auto;
+  height:260px;
   border-radius:16px;
   background:#fff;
-  padding:15px;
 }
 
-/* VIDEO */
-video{
+.info-box{
+  background:#ffffff;
+  color:#111;
+  border-radius:20px;
+  padding:40px;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.info-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.info-grid div{
+  flex:1;
+  min-width:260px;
+}
+
+.info-grid h3{
+  margin-bottom:10px;
+}
+
+.video-box video{
   width:100%;
   max-width:900px;
+  border-radius:20px;
   display:block;
-  margin:auto;
-  border-radius:14px;
+  margin:0 auto;
 }
 
-/* FLOATING BUTTON */
-.prebook{
+.cta{
   position:fixed;
   bottom:20px;
   right:20px;
-  background:#ff4d7e;
+  background:#ff4081;
   color:#fff;
-  padding:14px 22px;
+  padding:15px 22px;
   border-radius:30px;
   text-decoration:none;
   font-weight:bold;
-  box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -101,21 +108,19 @@ video{
 <body>
 
 <!-- HERO -->
-<div class="hero">
-  <img src="images/nextaura-logo.png" alt="NextAura Technologies">
+<section class="hero">
+  <img src="images/nextaura-logo.png" alt="NextAura">
   <h1>SafeRing</h1>
   <p>Smart Personal Safety Ring for Children, Women & Elderly</p>
-</div>
+</section>
 
 <!-- WHAT IS SAFERING -->
 <section>
   <h2>What is SafeRing?</h2>
-  <p>
+  <p style="max-width:900px;margin:auto;text-align:center;">
     SafeRing is a screen-free smart safety ring designed to keep families connected and protected.
     It helps parents track their children safely and allows working adults to monitor the well-being
-    of their elderly parents — without screens, games, or distractions.
-  </p>
-  <p>
+    of their elderly parents — without screens, games, or distractions.<br><br>
     SafeRing works quietly in the background and sends important alerts directly to the caregiver’s mobile.
   </p>
 </section>
@@ -124,30 +129,54 @@ video{
 <section>
   <h2>Product Preview</h2>
   <div class="preview">
-    <img src="images/ring-blue.png" alt="Blue Ring">
-    <img src="images/ring-pink.png" alt="Pink Ring">
-    <img src="images/ring-silver.png" alt="Silver Ring">
-    <img src="images/ring-black-gold.png" alt="Black Gold Ring">
+    <img src="images/ring-blue.png" alt="">
+    <img src="images/ring-pink.png" alt="">
+    <img src="images/ring-silver.png" alt="">
+    <img src="images/ring-black-gold.png" alt="">
   </div>
 </section>
 
-<!-- INFORMATION IMAGE (FIXED) -->
+<!-- INFORMATION (TEXT ONLY – NO IMAGE) -->
 <section>
-  <h2>Who is SafeRing For?</h2>
-  <img src="images/information.png" class="info-img" alt="SafeRing Information">
+  <div class="info-box">
+    <h2>Who is SafeRing For?</h2>
+
+    <div class="info-grid">
+      <div>
+        <h3 style="color:#1976d2;">👶 For Children</h3>
+        <ul>
+          <li>Track your child anytime</li>
+          <li>Watch daily activities</li>
+          <li>Monitor body temperature</li>
+          <li>One-touch SOS for emergencies</li>
+          <li>No screen • No games • Exam-safe</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="color:#f57c00;">👴 For Elderly Parents</h3>
+        <ul>
+          <li>Track elderly parents remotely</li>
+          <li>Check daily activity & movement</li>
+          <li>Monitor temperature for health safety</li>
+          <li>One-touch SOS for emergencies</li>
+          <li>Peace of mind for working families</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- VIDEO -->
-<section>
+<section class="video-box">
   <h2>Watch SafeRing in Action</h2>
   <video controls>
-    <source src="videos/safering-demo.mp4" type="video/mp4">
-    Your browser does not support video.
+    <source src="videos/saferingdemo.mp4" type="video/mp4">
   </video>
 </section>
 
-<!-- FLOATING PREBOOK BUTTON -->
-<a class="prebook" href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
+<!-- PAYMENT BUTTON -->
+<a class="cta" href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
   Pre-Book ₹999
 </a>
 

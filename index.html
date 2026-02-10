@@ -2,102 +2,96 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>SafeRing – Smart Personal Safety Ring</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeRing – Smart Safety Ring</title>
 
 <style>
 body{
-    margin:0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background:#0b1530;
-    color:#fff;
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#0a1a3c,#0b4ea2);
+  color:#fff;
 }
 
 /* HERO */
 .hero{
-    background:linear-gradient(135deg,#00a8ff,#007bff);
-    text-align:center;
-    padding:60px 20px;
+  text-align:center;
+  padding:60px 20px;
 }
 .hero img{
-    width:120px;
-    animation:float 3s ease-in-out infinite;
+  width:120px;
+  animation: pulse 2.5s infinite;
 }
-@keyframes float{
-    0%{transform:translateY(0)}
-    50%{transform:translateY(-10px)}
-    100%{transform:translateY(0)}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
 }
 .hero h1{
-    font-size:56px;
-    margin:20px 0 10px;
-    letter-spacing:2px;
+  font-size:64px;
+  margin:20px 0 10px;
+  letter-spacing:2px;
 }
 .hero p{
-    font-size:18px;
-    opacity:.9;
+  font-size:18px;
+  opacity:0.9;
 }
 
 /* SECTIONS */
 section{
-    padding:50px 20px;
-    max-width:1100px;
-    margin:auto;
+  padding:60px 20px;
+  max-width:1200px;
+  margin:auto;
 }
 h2{
-    font-size:32px;
-    margin-bottom:20px;
+  text-align:center;
+  margin-bottom:30px;
 }
 
 /* PREVIEW */
 .preview{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 .preview img{
-    width:100%;
-    border-radius:16px;
-    background:#fff;
-    padding:10px;
+  width:100%;
+  border-radius:16px;
+  background:#fff;
+  padding:10px;
 }
 
 /* INFO IMAGE */
 .info-img{
-    margin-top:30px;
-}
-.info-img img{
-    width:100%;
-    max-width:700px;
-    display:block;
-    margin:auto;
+  display:block;
+  margin:40px auto;
+  max-width:900px;
+  width:100%;
+  border-radius:20px;
 }
 
 /* VIDEO */
 video{
-    width:100%;
-    max-width:700px;
-    display:block;
-    margin:30px auto;
-    border-radius:20px;
+  width:100%;
+  max-width:800px;
+  display:block;
+  margin:30px auto;
+  border-radius:16px;
 }
 
 /* BUTTON */
-.prebook{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#ff2f7d;
-    color:#fff;
-    padding:16px 26px;
-    border-radius:30px;
-    font-size:18px;
-    text-decoration:none;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-    z-index:1000;
+.cta{
+  text-align:center;
+  margin:60px 0;
 }
-.prebook:hover{
-    background:#ff4f8f;
+.cta a{
+  background:#ff4d88;
+  color:#fff;
+  padding:16px 36px;
+  font-size:20px;
+  text-decoration:none;
+  border-radius:40px;
+  font-weight:bold;
 }
 </style>
 </head>
@@ -106,9 +100,9 @@ video{
 
 <!-- HERO -->
 <div class="hero">
-    <img src="images/nextaura-logo.png" alt="NextAura Technologies">
-    <h1>SafeRing</h1>
-    <p>Smart Personal Safety Ring for Children, Women & Elderly</p>
+  <img src="images/nextaura-logo.png" alt="NextAura Technologies">
+  <h1>SafeRing</h1>
+  <p>Smart Personal Safety Ring for Children, Women & Elderly</p>
 </div>
 
 <!-- WHAT IS -->
@@ -116,7 +110,8 @@ video{
 <h2>What is SafeRing?</h2>
 <p>
 SafeRing is a screen-free smart safety ring designed to keep families connected and protected.
-It helps parents track their children safely and allows working adults to monitor the well-being of their elderly parents — without screens, games, or distractions.
+It helps parents track their children safely and allows working adults to monitor the well-being
+of their elderly parents — without screens, games, or distractions.
 <br><br>
 SafeRing works quietly in the background and sends important alerts directly to the caregiver’s mobile.
 </p>
@@ -125,34 +120,31 @@ SafeRing works quietly in the background and sends important alerts directly to 
 <!-- PRODUCT PREVIEW -->
 <section>
 <h2>Product Preview</h2>
-
 <div class="preview">
-    <img src="images/ring-blue.png" alt="SafeRing Blue">
-    <img src="images/ring-pink.png" alt="SafeRing Pink">
-    <img src="images/ring-silver.png" alt="SafeRing Silver">
-    <img src="images/ring-black-gold.png" alt="SafeRing Black Gold">
+  <img src="images/ring-blue.png" alt="SafeRing Blue">
+  <img src="images/ring-pink.png" alt="SafeRing Pink">
+  <img src="images/ring-silver.png" alt="SafeRing Silver">
+  <img src="images/ring-black-gold.png" alt="SafeRing Black Gold">
 </div>
 
-<div class="info-img">
-    <img src="images/information.png" alt="SafeRing Use Information">
-</div>
+<img src="images/information.png" class="info-img" alt="SafeRing Information">
 </section>
 
 <!-- VIDEO -->
 <section>
 <h2>Watch SafeRing in Action</h2>
 <video controls>
-    <source src="videos/safering-demo.mp4" type="video/mp4">
-    Your browser does not support video.
+  <source src="videos/safering-demo.mp4" type="video/mp4">
+  Your browser does not support video.
 </video>
 </section>
 
-<!-- PREBOOK BUTTON -->
-<a class="prebook" 
-   href="https://rzp.io/rzp/Cmxk4KZp" 
-   target="_blank">
-   Pre-Book ₹999
-</a>
+<!-- PREBOOK -->
+<div class="cta">
+  <a href="https://rzp.io/rzp/Cmxk4KZp" target="_blank">
+    👉 Pre-Book Now – ₹999
+  </a>
+</div>
 
 </body>
 </html>

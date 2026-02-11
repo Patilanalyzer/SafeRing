@@ -3,23 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeRing™ | Screen-Free Smart Safety Ring</title>
+<title>SafeRing™ | Smart Safety Ring</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-body{background:#0f0f0f;color:#fff;line-height:1.6;}
-a{text-decoration:none;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:#111;
 position:fixed;
 width:100%;
 top:0;
 z-index:1000;
+backdrop-filter:blur(15px);
+background:rgba(0,0,0,0.4);
 }
 
 header img{height:45px;}
@@ -28,12 +31,14 @@ header img{height:45px;}
 background:linear-gradient(45deg,#00f2fe,#4facfe);
 padding:12px 25px;
 border-radius:30px;
-color:#000;
 font-weight:bold;
+color:#000;
 transition:0.3s;
+cursor:pointer;
+display:inline-block;
 }
 
-.btn:hover{transform:scale(1.05);}
+.btn:hover{transform:scale(1.08);}
 
 .hero{
 height:100vh;
@@ -42,54 +47,55 @@ align-items:center;
 justify-content:center;
 text-align:center;
 padding:0 20px;
-background:url('images/ring.png') center/cover no-repeat;
 position:relative;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
-position:relative;
-z-index:2;
 max-width:800px;
+animation:fadeIn 2s ease;
 }
 
-.hero h1{
-font-size:40px;
-margin-bottom:20px;
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.counter{
+font-size:45px;
+font-weight:700;
+color:#00f2fe;
+margin:20px 0;
 }
 
 section{
-padding:80px 8%;
+padding:100px 8%;
 text-align:center;
 }
 
-.section-dark{
-background:#151515;
-}
-
-h2{
-margin-bottom:30px;
-font-size:32px;
+.glass{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+border-radius:20px;
+padding:40px;
+box-shadow:0 0 30px rgba(0,0,0,0.3);
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
+margin-top:40px;
 }
 
 .card{
-background:#1c1c1c;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
 padding:30px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,255,255,0.1);
+border-radius:20px;
+transition:0.3s;
 }
+
+.card:hover{transform:translateY(-10px);}
 
 .card img{
 width:100%;
@@ -97,19 +103,58 @@ max-width:200px;
 margin-bottom:20px;
 }
 
-.video-section video{
+video{
 width:90%;
-max-width:800px;
-border-radius:15px;
-box-shadow:0 0 40px rgba(0,255,255,0.3);
+max-width:900px;
+border-radius:20px;
+box-shadow:0 0 40px rgba(0,255,255,0.4);
 }
 
 footer{
-background:#111;
-padding:40px 8%;
+padding:40px;
 text-align:center;
+background:rgba(0,0,0,0.5);
 font-size:14px;
-color:#aaa;
+color:#ccc;
+}
+
+/* Popup */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.popup-content{
+background:#111;
+padding:40px;
+border-radius:20px;
+width:90%;
+max-width:400px;
+text-align:center;
+}
+
+.popup input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+right:30px;
+font-size:25px;
+cursor:pointer;
 }
 </style>
 </head>
@@ -117,16 +162,19 @@ color:#aaa;
 <body>
 
 <header>
-<img src="images/nextaura-logo.png" alt="NextAura Logo">
-<a href="https://rzp.io/rzp/Cmxk4KZp" class="btn">Pre-Book ₹999</a>
+<img src="images/nextaura-logo.png">
+<div class="btn" onclick="openPopup()">Pre-Book ₹999</div>
 </header>
 
 <section class="hero">
 <div class="hero-content">
 <h1>A Screen-Free Smart Safety Ring</h1>
 <p>Designed for children & elderly parents. No screen. No distraction. Only safety.</p>
-<br>
-<a href="https://rzp.io/rzp/Cmxk4KZp" class="btn">Secure Your Slot – ₹999</a>
+
+<div>Pre-Booked By</div>
+<div class="counter" id="counter">1000</div>
+
+<div class="btn" onclick="openPopup()">Secure Your Slot – ₹999</div>
 </div>
 </section>
 
@@ -134,73 +182,71 @@ color:#aaa;
 <h2>Available Variants</h2>
 <div class="cards">
 <div class="card">
-<img src="images/ring-blue.png" alt="Blue Ring">
-<h3>Blue Edition</h3>
-<p>Premium stylish design</p>
+<img src="images/ring-blue.png">
+<h3>Children Edition</h3>
 </div>
-
 <div class="card">
-<img src="images/ring-pink.png" alt="Pink Ring">
-<h3>Pink Edition</h3>
-<p>Elegant & lightweight</p>
+<img src="images/ring-pink.png">
+<h3>Women Edition</h3>
 </div>
-
 <div class="card">
-<img src="images/ring-silver.png" alt="Silver Ring">
-<h3>Silver Edition</h3>
-<p>Classic metallic finish</p>
+<img src="images/ring-silver.png">
+<h3>Elderly Edition</h3>
 </div>
 </div>
 </section>
 
-<section class="section-dark video-section">
-<h2>Watch SafeRing Demo</h2>
+<section>
+<h2>Technology Overview</h2>
+<div class="glass">
+<img src="images/information.png" style="max-width:100%;border-radius:15px;">
+</div>
+</section>
+
+<section>
+<h2>Watch Demo</h2>
 <video controls autoplay muted loop playsinline>
 <source src="videos/demo.mp4" type="video/mp4">
-Your browser does not support the video tag.
 </video>
-</section>
-
-<section>
-<h2>Why Screen-Free Matters</h2>
-<div class="cards">
-<div class="card">
-<h3>No Mobile Addiction</h3>
-<p>No apps, no games, no distraction.</p>
-</div>
-<div class="card">
-<h3>Exam Safe</h3>
-<p>Completely school friendly.</p>
-</div>
-<div class="card">
-<h3>24/7 Safety</h3>
-<p>Continuous monitoring & SOS alert.</p>
-</div>
-</div>
-</section>
-
-<section class="section-dark">
-<h2>Early Support Offer</h2>
-<p style="font-size:28px;margin:20px 0;">₹999 Pre-Booking</p>
-<p>Launch price will be higher. Limited slots available.</p>
-<br>
-<a href="https://rzp.io/rzp/Cmxk4KZp" class="btn">Pre-Book Now</a>
-</section>
-
-<section>
-<h2>About Us</h2>
-<p style="max-width:800px;margin:auto;">
-SafeRing by NextAura Technologies is built for Indian families who want
-simple, secure and distraction-free safety solutions.
-</p>
-<br>
-<img src="images/information.png" alt="Information" style="max-width:400px;width:100%;">
 </section>
 
 <footer>
 <p>© 2026 SafeRing™ | Built by NextAura Technologies</p>
-<p>Support: support@safering.in</p>
+<p>support@safering.in</p>
 </footer>
+
+<!-- Lead Popup -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close-btn" onclick="closePopup()">✖</span>
+<h3>Secure Your Pre-Booking</h3>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Mobile Number" required>
+<button class="btn" onclick="redirectPayment()">Continue to Payment</button>
+</div>
+</div>
+
+<script>
+/* Counter Animation */
+let count=1000;
+setInterval(()=>{
+count+=Math.floor(Math.random()*3);
+document.getElementById("counter").innerText=count+"+";
+},3000);
+
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+function redirectPayment(){
+window.location.href="https://rzp.io/rzp/Cmxk4KZp";
+}
+</script>
 
 </body>
 </html>

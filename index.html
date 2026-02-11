@@ -3,248 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeRing™ | Smart Safety Ring</title>
+<title>SafeRing™ | Family Safety Redefined</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;overflow-x:hidden;}
-a{text-decoration:none;color:inherit;}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-backdrop-filter:blur(15px);
-background:rgba(0,0,0,0.4);
-}
-
+header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;}
 header img{height:45px;}
-
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;}
+.hero h1{font-size:42px;margin-bottom:20px;}
+.hero p{max-width:700px;margin-bottom:20px;}
 .btn{
 background:linear-gradient(45deg,#00f2fe,#4facfe);
-padding:12px 25px;
+padding:14px 30px;
 border-radius:30px;
 font-weight:bold;
 color:#000;
-transition:0.3s;
 cursor:pointer;
+margin-top:20px;
+transition:0.3s;
 display:inline-block;
 }
-
 .btn:hover{transform:scale(1.08);}
-
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 20px;
-position:relative;
-}
-
-.hero-content{
-max-width:800px;
-animation:fadeIn 2s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-.counter{
-font-size:45px;
-font-weight:700;
-color:#00f2fe;
-margin:20px 0;
-}
-
-section{
-padding:100px 8%;
-text-align:center;
-}
-
-.glass{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(20px);
-border-radius:20px;
-padding:40px;
-box-shadow:0 0 30px rgba(0,0,0,0.3);
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
+section{padding:80px 8%;text-align:center;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px;}
 .card{
 background:rgba(255,255,255,0.1);
-backdrop-filter:blur(15px);
 padding:30px;
 border-radius:20px;
-transition:0.3s;
+backdrop-filter:blur(20px);
 }
-
-.card:hover{transform:translateY(-10px);}
-
-.card img{
-width:100%;
-max-width:200px;
-margin-bottom:20px;
-}
-
-video{
-width:90%;
-max-width:900px;
-border-radius:20px;
-box-shadow:0 0 40px rgba(0,255,255,0.4);
-}
-
-footer{
-padding:40px;
-text-align:center;
-background:rgba(0,0,0,0.5);
-font-size:14px;
-color:#ccc;
-}
-
-/* Popup */
+.card img{width:100%;max-width:200px;margin-bottom:15px;}
+video{width:90%;max-width:800px;border-radius:20px;margin-top:30px;}
 .popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+position:fixed;top:0;left:0;width:100%;height:100%;
 background:rgba(0,0,0,0.8);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:2000;
+display:none;justify-content:center;align-items:center;
 }
-
 .popup-content{
-background:#111;
-padding:40px;
-border-radius:20px;
-width:90%;
-max-width:400px;
-text-align:center;
+background:#111;padding:40px;border-radius:20px;
+width:90%;max-width:400px;text-align:center;
 }
-
 .popup input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:10px;
+width:100%;padding:12px;margin:10px 0;
+border:none;border-radius:10px;
 }
-
-.close-btn{
-position:absolute;
-top:20px;
-right:30px;
-font-size:25px;
-cursor:pointer;
-}
+footer{text-align:center;padding:40px;background:rgba(0,0,0,0.5);font-size:14px;}
+.small{font-size:14px;opacity:0.8;}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="images/nextaura-logo.png">
-<div class="btn" onclick="openPopup()">Pre-Book ₹999</div>
+<img src="images/nextaura-logo.png" alt="NextAura Logo">
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h1>A Screen-Free Smart Safety Ring</h1>
-<p>Designed for children & elderly parents. No screen. No distraction. Only safety.</p>
+<h1>SafeRing™ – Smart Safety Without Screens</h1>
+<p>
+SafeRing is a next-generation safety wearable designed for children and elderly parents.
+No screen. No distraction. Only protection.
+</p>
 
-<div>Pre-Booked By</div>
-<div class="counter" id="counter">1000</div>
+<p class="small">
+Built by NextAura Technologies — focused on security-first family innovations.
+</p>
 
-<div class="btn" onclick="openPopup()">Secure Your Slot – ₹999</div>
+<div class="btn" onclick="openPopup()">Join Early Access</div>
+</section>
+
+<section>
+<h2>Why SafeRing?</h2>
+<div class="cards">
+<div class="card">
+<h3>Screen-Free Design</h3>
+<p>No games, no apps, no addiction. Only safety.</p>
+</div>
+<div class="card">
+<h3>Real-Time Alerts</h3>
+<p>Activity, movement & emergency notifications instantly.</p>
+</div>
+<div class="card">
+<h3>One-Touch SOS</h3>
+<p>Instant alert to family in emergency situations.</p>
+</div>
 </div>
 </section>
 
 <section>
-<h2>Available Variants</h2>
+<h2>Designed For</h2>
 <div class="cards">
 <div class="card">
 <img src="images/ring-blue.png">
-<h3>Children Edition</h3>
-</div>
-<div class="card">
-<img src="images/ring-pink.png">
-<h3>Women Edition</h3>
+<h3>Children</h3>
+<p>Safe, exam-friendly & distraction-free wearable.</p>
 </div>
 <div class="card">
 <img src="images/ring-silver.png">
-<h3>Elderly Edition</h3>
+<h3>Elderly</h3>
+<p>Peace of mind for working families.</p>
 </div>
 </div>
 </section>
 
 <section>
 <h2>Technology Overview</h2>
-<div class="glass">
-<img src="images/information.png" style="max-width:100%;border-radius:15px;">
-</div>
+<img src="images/information.png" style="max-width:500px;width:100%;border-radius:20px;">
 </section>
 
 <section>
-<h2>Watch Demo</h2>
-<video controls autoplay muted loop playsinline>
+<h2>Product Demo</h2>
+<video controls>
 <source src="videos/demo.mp4" type="video/mp4">
 </video>
 </section>
 
+<section>
+<h2>About NextAura Technologies</h2>
+<p style="max-width:800px;margin:auto;">
+NextAura Technologies is building secure, privacy-first wearable solutions for Indian families.
+Our mission is to create simple yet powerful safety devices that protect loved ones without
+introducing digital addiction.
+</p>
+
+<br>
+
+<p style="max-width:800px;margin:auto;">
+SafeRing is our first step. In the future, we plan to launch:
+</p>
+
+<div class="cards">
+<div class="card">
+<h3>Smart Safety Bands</h3>
+<p>Advanced tracking for children & teens.</p>
+</div>
+<div class="card">
+<h3>Elder Care Monitoring Devices</h3>
+<p>Health + safety wearable ecosystem.</p>
+</div>
+<div class="card">
+<h3>AI-Based Safety App</h3>
+<p>Predictive alerts & intelligent monitoring.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Our Commitment</h2>
+<div class="cards">
+<div class="card">
+<h3>Privacy First</h3>
+<p>Your family data will never be sold or misused.</p>
+</div>
+<div class="card">
+<h3>Built for India</h3>
+<p>Designed considering Indian family safety needs.</p>
+</div>
+<div class="card">
+<h3>Security Focused</h3>
+<p>End-to-end encrypted communication.</p>
+</div>
+</div>
+</section>
+
 <footer>
-<p>© 2026 SafeRing™ | Built by NextAura Technologies</p>
+<p>SafeRing™ by NextAura Technologies</p>
 <p>support@safering.in</p>
+<p class="small">© 2026 All Rights Reserved</p>
 </footer>
 
 <!-- Lead Popup -->
 <div class="popup" id="popup">
 <div class="popup-content">
-<span class="close-btn" onclick="closePopup()">✖</span>
-<h3>Secure Your Pre-Booking</h3>
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="tel" placeholder="Mobile Number" required>
-<button class="btn" onclick="redirectPayment()">Continue to Payment</button>
+<h3>Join Early Access</h3>
+<p>Be the first to know when SafeRing launches.</p>
+<input type="text" id="name" placeholder="Full Name">
+<input type="email" id="email" placeholder="Email Address">
+<input type="tel" id="phone" placeholder="Mobile Number">
+<button class="btn" onclick="submitLead()">Submit</button>
 </div>
 </div>
 
 <script>
-/* Counter Animation */
-let count=1000;
-setInterval(()=>{
-count+=Math.floor(Math.random()*3);
-document.getElementById("counter").innerText=count+"+";
-},3000);
-
 function openPopup(){
 document.getElementById("popup").style.display="flex";
 }
 
-function closePopup(){
-document.getElementById("popup").style.display="none";
+function submitLead(){
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+
+if(name==""||email==""||phone==""){
+alert("Please fill all details");
+return;
 }
 
-function redirectPayment(){
-window.location.href="https://rzp.io/rzp/Cmxk4KZp";
+alert("Thank you for joining SafeRing early access!");
+document.getElementById("popup").style.display="none";
 }
 </script>
 

@@ -7,206 +7,115 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f8f9fb;color:#222;line-height:1.6;}
-header{background:#0d1b2a;color:#fff;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;}
-header h1{font-size:20px;}
-nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px;}
-
-.hero{
-background:linear-gradient(to right,#0d1b2a,#1b263b);
-color:#fff;
-padding:80px 8%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.hero-text{max-width:550px;}
-.hero h2{font-size:38px;margin-bottom:20px;}
-.hero p{font-size:18px;margin-bottom:30px;color:#ddd;}
-.hero img{max-width:400px;width:100%;}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-margin-right:10px;
-margin-top:10px;
-}
-
-.primary{background:#00b4d8;color:#fff;}
-.secondary{border:2px solid #fff;color:#fff;}
-
-.section{padding:80px 8%;text-align:center;}
-.section h3{font-size:30px;margin-bottom:20px;}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-.highlight{
-background:#0d1b2a;
-color:#fff;
-padding:80px 8%;
-}
-
-.video-section{
-padding:80px 8%;
-text-align:center;
-background:#ffffff;
-}
-
-video{
-width:100%;
-max-width:800px;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-.price-box{
-background:#fff;
-padding:40px;
-border-radius:10px;
-display:inline-block;
-margin-top:30px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-footer{
-background:#0d1b2a;
-color:#fff;
-text-align:center;
-padding:40px 8%;
-margin-top:50px;
-}
-
-.small{font-size:14px;color:#777;margin-top:10px;}
-
-@media(max-width:900px){
-.hero{flex-direction:column;text-align:center;}
-.hero img{margin-top:40px;}
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0b0f19;color:#fff;overflow-x:hidden;}
+section{padding:80px 8%;}
+h2,h3{margin-bottom:20px;}
+.btn{display:inline-block;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:600;margin-top:20px;}
+.primary{background:#00e0ff;color:#000;}
+.primary:hover{background:#00bcd4;}
+.counter{font-size:40px;color:#00e0ff;margin-top:10px;}
+.card{background:#141b2d;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.5);transition:0.4s;}
+.card:hover{transform:translateY(-10px);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.hero{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.hero img{width:350px;animation:float 4s ease-in-out infinite;}
+@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-20px);}100%{transform:translateY(0);}}
+input{width:100%;padding:12px;margin:10px 0;border:none;border-radius:6px;}
+form{max-width:400px;margin:auto;}
+.highlight{background:linear-gradient(45deg,#00e0ff,#0072ff);padding:60px 8%;text-align:center;}
+footer{background:#111;text-align:center;padding:40px 8%;}
+.small{color:#aaa;font-size:14px;}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>SafeRing™ <span style="font-weight:300;">by NextAura Technologies</span></h1>
-<nav>
-<a href="#who">Who Is It For</a>
-<a href="#how">How It Works</a>
-<a href="#video">Demo</a>
-<a href="#prebook">Pre-Book</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
 <section class="hero">
-<div class="hero-text">
-<h2>A Screen-Free Smart Safety Ring for Families</h2>
-<p>Designed for children and elderly parents — no screen, no distraction, only safety.</p>
+<div>
+<h2>A Screen-Free Smart Safety Ring</h2>
+<p>Designed for children & elderly parents. No screen. No distraction. Only safety.</p>
 
-<a href="YOUR_RAZORPAY_LINK" class="btn primary">Pre-Book – ₹999</a>
-<a href="#how" class="btn secondary">Learn How It Works</a>
+<h3>Pre-Booked By</h3>
+<div class="counter" id="counter">1000</div>
 
-<p class="small">Trusted by <b>1000+ Early Supporters</b></p>
+<a href="#lead" class="btn primary">Pre-Book Now – ₹999</a>
 </div>
 
-<img src="ring.png" alt="SafeRing Product Image">
+<img src="ring.png" alt="SafeRing">
 </section>
 
-<section id="who" class="section">
-<h3>Who Is SafeRing For?</h3>
-
-<div class="features">
+<section>
+<h2>Who Is SafeRing For?</h2>
+<div class="grid">
 <div class="card">
-<h4>For Children</h4>
-<p>✔ Live Tracking<br>
-✔ Daily Activity Monitoring<br>
-✔ Body Temperature Alerts<br>
-✔ One-touch SOS<br>
-✔ Exam Safe – No Screen</p>
+<h3>For Children</h3>
+<p>Live tracking<br>Temperature alerts<br>SOS Button<br>Exam safe</p>
 </div>
-
 <div class="card">
-<h4>For Elderly Parents</h4>
-<p>✔ Remote Safety Monitoring<br>
-✔ Health Alerts<br>
-✔ Emergency SOS<br>
-✔ Peace of Mind</p>
+<h3>For Elderly</h3>
+<p>Remote monitoring<br>Health tracking<br>Emergency alerts</p>
 </div>
 </div>
 </section>
 
-<section id="how" class="section">
-<h3>How SafeRing Works</h3>
-
-<div class="features">
-<div class="card"><h4>1. Wear the Ring</h4><p>Comfortable & lightweight design.</p></div>
-<div class="card"><h4>2. Smart Monitoring</h4><p>Tracks location & temperature.</p></div>
-<div class="card"><h4>3. Family Alerts</h4><p>Real-time updates in mobile app.</p></div>
-<div class="card"><h4>4. SOS Emergency</h4><p>Instant emergency notification.</p></div>
+<section>
+<h2>How It Works</h2>
+<div class="grid">
+<div class="card">Wear the ring</div>
+<div class="card">Tracks safety data</div>
+<div class="card">App sends alerts</div>
+<div class="card">SOS sends notification</div>
 </div>
-
-<p class="small">All data is encrypted and secure.</p>
 </section>
 
-<section id="video" class="video-section">
-<h3>Product Demo</h3>
-<p>Watch how SafeRing keeps your family protected.</p>
-
-<video controls>
+<section>
+<h2>Product Demo</h2>
+<video controls width="100%">
 <source src="demo.mp4" type="video/mp4">
-Your browser does not support video.
 </video>
 </section>
 
 <section class="highlight">
-<h3>Why Screen-Free Matters</h3>
-<p>No addiction. No distraction. Only safety.</p>
+<h2>Investor Insight</h2>
+<p>India has 300M+ families concerned about child & elderly safety.</p>
+<p>SafeRing targets a ₹10,000+ crore wearable safety market.</p>
+<p>Early traction: 1000+ pre-book supporters.</p>
 </section>
 
-<section id="prebook" class="section">
-<h3>Early Support Pre-Booking</h3>
+<section id="lead">
+<h2>Secure Your Pre-Booking</h2>
+<p>Enter details before proceeding to payment</p>
 
-<div class="price-box">
-<h2>₹999</h2>
-<p>Early Supporter Price</p>
-<p class="small">Launch price will be higher</p>
-<a href="YOUR_RAZORPAY_LINK" class="btn primary">Secure Your Slot</a>
-</div>
-
-<p class="small">
-This is early support pre-booking. Launch expected in 6–8 months.
-</p>
-</section>
-
-<section id="contact" class="section">
-<h3>Contact Us</h3>
-<p>Email: support@safering.in</p>
-<p>Phone: +91 9011039601</p>
+<form id="leadForm">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Mobile Number" required>
+<button type="submit" class="btn primary">Continue to Payment</button>
+</form>
 </section>
 
 <footer>
 <h3>NextAura Technologies</h3>
-<p>Building next-generation safety solutions for Indian families.</p>
-<p class="small">© 2026 SafeRing™. All Rights Reserved.</p>
+<p class="small">SafeRing™ | Screen-Free Family Safety</p>
+<p class="small">support@safering.in | +91 9011039601</p>
 </footer>
+
+<script>
+/* Animated Counter */
+let count = 1000;
+setInterval(()=>{
+count += Math.floor(Math.random()*3);
+document.getElementById("counter").innerText = count;
+},3000);
+
+/* Lead Capture + Redirect */
+document.getElementById("leadForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Details captured successfully! Redirecting to secure payment.");
+window.location.href="YOUR_RAZORPAY_LINK";
+});
+</script>
 
 </body>
 </html>

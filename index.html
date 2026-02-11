@@ -11,10 +11,10 @@
 body{background:#0b0f19;color:#fff;overflow-x:hidden;}
 section{padding:80px 8%;}
 h2,h3{margin-bottom:20px;}
-.btn{display:inline-block;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:600;margin-top:20px;}
+.btn{display:inline-block;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:600;margin-top:20px;border:none;cursor:pointer;}
 .primary{background:#00e0ff;color:#000;}
 .primary:hover{background:#00bcd4;}
-.counter{font-size:40px;color:#00e0ff;margin-top:10px;}
+.counter{font-size:42px;color:#00e0ff;margin-top:10px;font-weight:700;}
 .card{background:#141b2d;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.5);transition:0.4s;}
 .card:hover{transform:translateY(-10px);}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
@@ -24,6 +24,7 @@ h2,h3{margin-bottom:20px;}
 input{width:100%;padding:12px;margin:10px 0;border:none;border-radius:6px;}
 form{max-width:400px;margin:auto;}
 .highlight{background:linear-gradient(45deg,#00e0ff,#0072ff);padding:60px 8%;text-align:center;}
+video{width:100%;max-width:800px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.4);}
 footer{background:#111;text-align:center;padding:40px 8%;}
 .small{color:#aaa;font-size:14px;}
 </style>
@@ -71,8 +72,9 @@ footer{background:#111;text-align:center;padding:40px 8%;}
 
 <section>
 <h2>Product Demo</h2>
-<video controls width="100%">
+<video controls>
 <source src="demo.mp4" type="video/mp4">
+Your browser does not support video.
 </video>
 </section>
 
@@ -91,7 +93,7 @@ footer{background:#111;text-align:center;padding:40px 8%;}
 <input type="text" placeholder="Full Name" required>
 <input type="email" placeholder="Email Address" required>
 <input type="tel" placeholder="Mobile Number" required>
-<button type="submit" class="btn primary">Continue to Payment</button>
+<button type="submit" class="btn primary">Continue to Secure Payment</button>
 </form>
 </section>
 
@@ -113,7 +115,7 @@ document.getElementById("counter").innerText = count;
 document.getElementById("leadForm").addEventListener("submit",function(e){
 e.preventDefault();
 alert("Details captured successfully! Redirecting to secure payment.");
-window.location.href="YOUR_RAZORPAY_LINK";
+window.location.href="https://rzp.io/rzp/Cmxk4KZp";
 });
 </script>
 

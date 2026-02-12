@@ -3,238 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeRing™ | Screen-Free Smart Safety Ring</title>
+<title>SafeRing™ | India’s First Screen-Free Safety Ring</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0f1117;
-color:white;
-overflow-x:hidden;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-position:fixed;
-width:100%;
-top:0;
-background:rgba(15,17,23,0.8);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-header img{
-height:40px;
-}
-
-header a{
-color:#00f5d4;
-text-decoration:none;
-font-weight:500;
-}
-
-section{
-padding:120px 10%;
-}
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.hero-text{
-max-width:500px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.hero p{
-opacity:0.8;
-margin-bottom:30px;
-}
-
-.btn{
-padding:15px 30px;
-background:#00f5d4;
-border:none;
-border-radius:30px;
-color:#000;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-.hero img{
-width:400px;
-animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
-}
-
-.glass{
-background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:20px;
-backdrop-filter:blur(15px);
-margin-top:50px;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.feature-card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.feature-card:hover{
-transform:translateY(-10px);
-background:rgba(255,255,255,0.08);
-}
-
-.counter{
-text-align:center;
-font-size:48px;
-color:#00f5d4;
-margin-top:30px;
-}
-
-video{
-width:100%;
-border-radius:20px;
-margin-top:40px;
-}
-
-iframe{
-width:100%;
-height:600px;
-border-radius:20px;
-border:none;
-margin-top:40px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-background:#111;
-margin-top:50px;
-opacity:0.6;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0b0f1a;color:#fff;overflow-x:hidden;}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;position:fixed;width:100%;top:0;background:rgba(11,15,26,0.8);backdrop-filter:blur(12px);z-index:1000;}
+header img{height:40px;}
+header a{color:#00ffd5;text-decoration:none;font-weight:500;}
+section{padding:120px 10%;}
+.hero{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.hero-text{max-width:550px;}
+.hero h1{font-size:48px;margin-bottom:20px;}
+.hero p{opacity:0.8;margin-bottom:30px;}
+.btn{padding:15px 30px;background:#00ffd5;border:none;border-radius:30px;color:#000;font-weight:600;cursor:pointer;transition:0.3s;}
+.btn:hover{transform:scale(1.05);}
+.hero img{width:420px;animation:float 4s ease-in-out infinite;}
+@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-15px);}100%{transform:translateY(0);}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px;}
+.card{background:rgba(255,255,255,0.05);padding:30px;border-radius:20px;backdrop-filter:blur(15px);transition:0.3s;}
+.card:hover{transform:translateY(-10px);background:rgba(255,255,255,0.08);}
+.stats{text-align:center;font-size:40px;color:#00ffd5;margin-top:20px;}
+video{width:100%;border-radius:20px;margin-top:40px;}
+iframe{width:100%;height:600px;border:none;border-radius:20px;margin-top:40px;}
+.timeline{margin-top:40px;}
+.timeline div{margin-bottom:20px;padding:20px;background:rgba(255,255,255,0.05);border-radius:15px;}
+footer{text-align:center;padding:40px;background:#111;margin-top:50px;opacity:0.6;}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="nextaura-logo.png" alt="NextAura">
+<img src="nextaura-logo.png">
 <a href="#register">Join Early Access</a>
 </header>
 
 <section class="hero">
 <div class="hero-text">
-<h1>India’s First Screen-Free Smart Safety Ring</h1>
-<p>Designed for children and elderly parents. No screen. No distraction. Only safety.</p>
+<h1>Your Safety. On Your Finger.</h1>
+<p>SafeRing is India’s first screen-free smart safety wearable for children and elderly parents.</p>
 <a href="#register"><button class="btn">Join Early Access</button></a>
 </div>
-
-<img src="images/ring-main.png" alt="SafeRing">
+<img src="images/ring-main.png">
 </section>
 
 <section>
-<h2>Why Screen-Free Matters</h2>
-<div class="features">
-<div class="feature-card">
-<h3>No Mobile Addiction</h3>
-<p>No games. No apps. Pure safety.</p>
+<h2>Market Opportunity</h2>
+<div class="grid">
+<div class="card">
+<h3>25+ Crore</h3>
+<p>Children in India</p>
 </div>
-<div class="feature-card">
-<h3>Exam Safe</h3>
-<p>No distraction in school or exams.</p>
+<div class="card">
+<h3>14+ Crore</h3>
+<p>Elderly Population</p>
 </div>
-<div class="feature-card">
-<h3>One Touch SOS</h3>
-<p>Instant emergency alert to family.</p>
-</div>
-<div class="feature-card">
-<h3>Live Location</h3>
-<p>Track your loved ones anytime.</p>
+<div class="card">
+<h3>₹20,000+ Cr</h3>
+<p>Growing Safety Tech Market</p>
 </div>
 </div>
 </section>
 
 <section>
-<h2>How SafeRing Works</h2>
-<div class="glass">
-<p>1️⃣ Wear the ring<br>
-2️⃣ Ring collects safety data<br>
-3️⃣ Alerts sent to family app<br>
-4️⃣ SOS sends instant emergency notification</p>
+<h2>Problem vs SafeRing</h2>
+<div class="grid">
+<div class="card">
+<h3>Mobile Phones</h3>
+<p>Distraction<br>Gaming addiction<br>Misuse possible</p>
 </div>
+<div class="card">
+<h3>SafeRing</h3>
+<p>No Screen<br>Purpose Built<br>One Touch SOS</p>
+</div>
+</div>
+</section>
 
+<section>
+<h2>How It Works</h2>
+<div class="card">
+1️⃣ Wear the ring<br><br>
+2️⃣ Collects safety data<br><br>
+3️⃣ Alerts sent to family<br><br>
+4️⃣ SOS emergency notification
+</div>
 <video controls>
 <source src="videos/demo.mp4" type="video/mp4">
 </video>
 </section>
 
 <section>
-<h2 style="text-align:center;">Families Showing Interest</h2>
-<div class="counter" id="counter">0</div>
+<h2>Product Roadmap</h2>
+<div class="timeline">
+<div>2026 Q1 – Prototype Development</div>
+<div>2026 Q2 – Field Testing & Refinement</div>
+<div>2026 Q3 – Manufacturing Setup</div>
+<div>2026 Q4 – Official Launch</div>
+</div>
+</section>
+
+<section>
+<h2>Our Vision</h2>
+<div class="card">
+SafeRing is the first step toward building India's safety wearable ecosystem.
+Future products include Smart Bands, Panic Pendants, GPS School ID solutions, and elderly monitoring wearables.
+</div>
+</section>
+
+<section>
+<h2 style="text-align:center;">Families Interested</h2>
+<div class="stats" id="counter">0+</div>
 </section>
 
 <section id="register">
-<h2>Be the First to Get SafeRing</h2>
+<h2>Be the First to Access SafeRing</h2>
 <p>This is NOT a payment. We are collecting early interest before launch.</p>
-
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSel1rianAEIgOZ-Y7PYZY9WXSR-anZNDYYcS3OQZqTLg1U6Hw/viewform?embedded=true"></iframe>
-
 </section>
 
 <footer>
-SafeRing™ by NextAura Technologies | Building India's Next Generation Safety Wearables
+SafeRing™ by NextAura Technologies | Made in India Safety Innovation
 </footer>
 
 <script>
 let count=0;
-let target=1287;
+let target=1584;
 let counter=document.getElementById("counter");
-
 let interval=setInterval(()=>{
-count+=5;
+count+=8;
 counter.innerText=count+"+";
-if(count>=target){
-clearInterval(interval);
-}
+if(count>=target){clearInterval(interval);}
 },20);
 </script>
 

@@ -3,169 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeRing™ | Screen-Free Smart Safety Ring</title>
+<title>SafeRing™ | Smart Screen-Free Safety Ring</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#0f0f1a,#151530,#0a0a14,#1c1c3c);
-background-size:400% 400%;
-animation:bgMove 15s ease infinite;
-color:white;
-overflow-x:hidden;
-}
-
-@keyframes bgMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+    background:#0f172a;
+    color:white;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-position:fixed;
-width:100%;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
-z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,23,42,0.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:700;
-font-size:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .logo img{
-height:40px;
-animation:logoPulse 3s infinite;
+    height:40px;
 }
 
-@keyframes logoPulse{
-0%,100%{transform:scale(1);}
-50%{transform:scale(1.1);}
-}
-
-.cta-btn{
-background:#00e5ff;
-color:black;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.cta-btn:hover{
-background:white;
-transform:scale(1.05);
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
 }
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 20px;
-flex-direction:column;
+    padding-top:140px;
+    padding-bottom:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-left:8%;
+    padding-right:8%;
 }
 
-.hero h1{
-font-size:48px;
-font-weight:800;
-max-width:800px;
-margin-bottom:20px;
+.hero-text{
+    max-width:50%;
 }
 
-.hero p{
-font-size:18px;
-opacity:0.8;
-max-width:600px;
-margin-bottom:30px;
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#cbd5e1;
+}
+
+.cta-btn{
+    padding:14px 28px;
+    background:#00f5c4;
+    color:black;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cta-btn:hover{
+    background:#00d9b0;
 }
 
 .hero img{
-width:300px;
-margin-top:40px;
-filter:drop-shadow(0 0 30px #00e5ff);
+    width:450px;
 }
 
-.glass{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-border-radius:20px;
-padding:40px;
-margin:40px auto;
-max-width:1100px;
+section{
+    padding:80px 8%;
 }
 
 .section-title{
-text-align:center;
-font-size:32px;
-margin-bottom:30px;
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
 }
 
 .features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:15px;
-transition:0.3s;
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-background:rgba(0,229,255,0.15);
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
 }
 
 .video-section{
-text-align:center;
-margin-top:40px;
+    text-align:center;
 }
 
 video{
-width:90%;
-max-width:800px;
-border-radius:15px;
-margin-top:20px;
-box-shadow:0 0 30px rgba(0,229,255,0.4);
+    width:80%;
+    border-radius:20px;
+    margin-top:30px;
+}
+
+.lead-box{
+    background:#1e293b;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+
+input{
+    padding:12px;
+    width:250px;
+    margin:10px;
+    border-radius:6px;
+    border:none;
 }
 
 footer{
-text-align:center;
-padding:40px 20px;
-background:rgba(0,0,0,0.5);
-margin-top:60px;
+    text-align:center;
+    padding:30px;
+    background:#0b1120;
+    color:#94a3b8;
 }
 
-footer p{
-opacity:0.7;
-}
-
-@media(max-width:768px){
-.hero h1{
-font-size:30px;
-}
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-text{
+        max-width:100%;
+    }
+    .hero img{
+        margin-top:40px;
+        width:300px;
+    }
 }
 </style>
 </head>
@@ -173,50 +180,98 @@ font-size:30px;
 <body>
 
 <header>
-<div class="logo">
-<img src="images/nextaura-logo.png">
-SafeRing™
-</div>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSel1rianAEIgOZ-Y7PYZY9WXSR-anZNDYYcS3OQZqTLg1U6Hw/viewform" class="cta-btn">Join Early Access</a>
+    <div class="logo">
+        <img src="images/nextaura-logo.png">
+        <h2>SafeRing™</h2>
+    </div>
+    <nav>
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#register">Register</a>
+    </nav>
 </header>
 
 <section class="hero">
-<h1>A Screen-Free Smart Safety Ring for Families</h1>
-<p>Designed for children & elderly parents. No screen. No distraction. Only safety.</p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSel1rianAEIgOZ-Y7PYZY9WXSR-anZNDYYcS3OQZqTLg1U6Hw/viewform" class="cta-btn">Get Early Access</a>
-<img src="images/ring-main.png" alt="SafeRing">
+    <div class="hero-text">
+        <h1>Your Safety. On Your Finger.</h1>
+        <p>India's first screen-free smart safety ring for children and elderly parents. No distraction. Only protection.</p>
+        <button class="cta-btn" onclick="document.getElementById('register').scrollIntoView()">Notify Me at Launch</button>
+    </div>
+    <img src="images/ring-main.png">
 </section>
 
-<div class="glass">
-<h2 class="section-title">Why SafeRing?</h2>
-<div class="features">
-<div class="card">✔ Screen-Free Design</div>
-<div class="card">✔ Real-Time Location Tracking</div>
-<div class="card">✔ Temperature Monitoring</div>
-<div class="card">✔ One-Touch SOS</div>
-<div class="card">✔ Secure Encrypted Data</div>
-<div class="card">✔ Designed for Indian Families</div>
-</div>
-</div>
+<section id="how">
+    <h2 class="section-title">How SafeRing Works</h2>
+    <div class="features">
+        <div class="card">
+            <h3>1. Wear SafeRing</h3>
+            <p>Comfortable lightweight design for everyday safety.</p>
+        </div>
+        <div class="card">
+            <h3>2. Ring Collects Data</h3>
+            <p>Tracks location, activity & temperature securely.</p>
+        </div>
+        <div class="card">
+            <h3>3. Family Gets Alerts</h3>
+            <p>Live updates sent to connected family app.</p>
+        </div>
+        <div class="card">
+            <h3>4. One Touch SOS</h3>
+            <p>Instant emergency alert when needed most.</p>
+        </div>
+    </div>
+</section>
 
-<div class="glass video-section">
-<h2 class="section-title">See SafeRing in Action</h2>
-<video controls>
-<source src="videos/demo.mp4" type="video/mp4">
-Your browser does not support video.
-</video>
-</div>
+<section id="features">
+    <h2 class="section-title">Powerful Features</h2>
+    <div class="features">
+        <div class="card">
+            <h3>Live Location</h3>
+            <p>Real-time GPS tracking anytime.</p>
+        </div>
+        <div class="card">
+            <h3>Emergency SOS</h3>
+            <p>Immediate notification to family.</p>
+        </div>
+        <div class="card">
+            <h3>Temperature Monitor</h3>
+            <p>Health insights simplified.</p>
+        </div>
+        <div class="card">
+            <h3>Water Resistant</h3>
+            <p>IP-rated protection for daily use.</p>
+        </div>
+    </div>
+</section>
 
-<div class="glass">
-<h2 class="section-title">About NextAura Technologies</h2>
-<p style="text-align:center;opacity:0.8;">
-We are building next-generation safety solutions focused on simplicity, privacy, and real-world family needs.
-SafeRing is our first innovation in a series of powerful screen-free security products coming soon.
-</p>
-</div>
+<section class="video-section">
+    <h2 class="section-title">See SafeRing in Action</h2>
+    <video controls>
+        <source src="videos/demo.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About NextAura Technologies</h2>
+    <div class="card">
+        <p>NextAura Technologies is building next-generation safety solutions focused on Indian families. SafeRing is our first step toward secure, distraction-free protection for children and elderly parents.</p>
+    </div>
+</section>
+
+<section id="register">
+    <h2 class="section-title">Be First to Know When We Launch</h2>
+    <div class="lead-box">
+        <p>This is NOT a payment. We are collecting interest before launch.</p>
+        <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSel1rianAEIgOZ-Y7PYZY9WXSR-anZNDYYcS3OQZqTLg1U6Hw/viewform?usp=header" target="_blank">
+            <button class="cta-btn">Register Interest</button>
+        </a>
+    </div>
+</section>
 
 <footer>
-<p>© 2026 SafeRing™ by NextAura Technologies. All rights reserved.</p>
+    © 2026 SafeRing™ | Built by NextAura Technologies
 </footer>
 
 </body>
